@@ -8,6 +8,7 @@ proxies:
   - {name: 🇸🇬 HK-SG中转, server: 116.251.217.39, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
   - {name: 🇭🇰 HK-Direct, server: 103.27.79.63, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
   - {name: 🇯🇵 JP-Osaka, server: 195.245.242.204, port: 20000, type: ssr, cipher: chacha20-ietf, password: pdcore178, protocol: auth_sha1_v4, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇯🇵 JP-Tokyo, server: 156.246.95.13, port: 40321, type: ss, cipher: aes-256-gcm, password: 78d6cbb90045b082}
 proxy-groups:
   - name: 🚀 中国代理
     type: select
@@ -16,6 +17,7 @@ proxy-groups:
       - 🇭🇰 HK-CN2
       - 🇭🇰 HK-Direct
       - 🇯🇵 JP-Osaka
+      - 🇯🇵 JP-Tokyo
       - 🇸🇬 HK-SG中转
   - name: 🎯 全球直连
     type: select
@@ -40,6 +42,7 @@ proxy-groups:
       - 🇭🇰 HK-CN2
       - 🇭🇰 HK-Direct
       - 🇯🇵 JP-Osaka
+      - 🇯🇵 JP-Tokyo
       - 🇸🇬 HK-SG中转
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
