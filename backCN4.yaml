@@ -6,7 +6,7 @@ external-controller: :9090
 proxies:
   - {name: 🇭🇰 HK-CN2, server: 38.6.219.66, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
   - {name: 🇸🇬 HK-SG中转, server: 116.251.217.39, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
-  - {name: 🇭🇰 HK-Direct, server: 103.27.79.63, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
+  - {name: 🇭🇰 HK-Direct, server: 103.255.208.89, port: 61301, type: ss, cipher: aes-256-gcm, password: H994fdE8QpHhDfeP}
   - {name: 🇯🇵 JP-Osaka, server: 195.245.242.204, port: 20000, type: ssr, cipher: chacha20-ietf, password: pdcore178, protocol: auth_sha1_v4, obfs: plain, protocol-param: "", obfs-param: ""}
   - {name: 🇯🇵 JP-Tokyo, server: 156.246.95.13, port: 40321, type: ss, cipher: aes-256-gcm, password: 78d6cbb90045b082}
 proxy-groups:
