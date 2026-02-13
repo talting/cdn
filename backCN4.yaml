@@ -4,21 +4,21 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 HK-CN2, server: 38.6.219.66, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
-  - {name: 🇸🇬 HK-SG中转, server: 116.251.217.39, port: 40321, type: ss, cipher: 2022-blake3-aes-128-gcm, password: P0TWoMvZJKLNYsrbMXTu1w==}
   - {name: 🇭🇰 HK-Direct, server: 103.255.208.89, port: 61301, type: ss, cipher: aes-256-gcm, password: H994fdE8QpHhDfeP}
-  - {name: 🇯🇵 JP-Osaka, server: 195.245.242.204, port: 20000, type: ssr, cipher: chacha20-ietf, password: pdcore178, protocol: auth_sha1_v4, obfs: plain, protocol-param: "", obfs-param: ""}
+  - {name: 🇯🇵 JP-Osaka, server: 45.142.125.47, port: 43642, type: ss, cipher: 2022-blake3-aes-256-gcm, password: j1HgM1RpO72/U6MYqFt4Zx7r6BGjDwITi1CT3EybKH4=}
   - {name: 🇯🇵 JP-Tokyo, server: 156.246.95.13, port: 40321, type: ss, cipher: aes-256-gcm, password: 78d6cbb90045b082}
+  - {name: 🇯🇵 Azure, server: 27.150.132.219, port: 45774, type: ss, cipher: aes-256-gcm, password: veJzGO3qqG}
+  - {"name":"🇯🇵 Azure Hy2","type":"hysteria2","server":"c.lhf277.top","port":8443,"password":"bcdXAzZWYVQl8KocmjYijCKg","up":"300 Mbps","down":"300 Mbps","sni":"c.lhf277.top","skip-cert-verify":true,"alpn":["h3"]}
 proxy-groups:
   - name: 🚀 中国代理
     type: select
     proxies:
       - DIRECT
-      - 🇭🇰 HK-CN2
       - 🇭🇰 HK-Direct
       - 🇯🇵 JP-Osaka
       - 🇯🇵 JP-Tokyo
-      - 🇸🇬 HK-SG中转
+      - 🇯🇵 Azure
+      - 🇯🇵 Azure Hy2
   - name: 🎯 全球直连
     type: select
     proxies:
